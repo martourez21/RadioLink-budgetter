@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="516.0" prefWidth="976.0" stylesheets="@../styles/caspian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoadCoveragePlannerController">
+   <children>
+      <BorderPane layoutX="99.0" layoutY="42.0" prefHeight="536.0" prefWidth="1034.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="System Paramaters">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="18.0" prefHeight="319.0" prefWidth="319.0">
+                                 <children>
+                                    <Label layoutX="1.0" layoutY="4.0" text="Data Channel Type (DCH)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="1.0" layoutY="42.0" text="Duplex Mode (DM)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="4.0" layoutY="87.0" text="User Environment (UE)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="130.0" text="System Bandwidth (BW)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="3.0" layoutY="174.0" text="Cell Edge Throughput (CET)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="-2.0" layoutY="223.0" text="Frequency Band (FB)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="1.0" layoutY="272.0" text="Terrain Morphology (TM)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="IN1" layoutX="160.0" prefHeight="25.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN2" layoutX="160.0" layoutY="38.0" prefHeight="25.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN3" layoutX="160.0" layoutY="83.0" prefHeight="25.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN4" layoutX="160.0" layoutY="126.0" prefHeight="26.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN5" layoutX="160.0" layoutY="170.0" prefHeight="26.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN6" layoutX="160.0" layoutY="219.0" prefHeight="25.0" prefWidth="150.0" />
+                                    <ComboBox fx:id="IN7" layoutX="160.0" layoutY="268.0" prefHeight="26.0" prefWidth="150.0" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="cmd_set_param" layoutX="176.0" layoutY="344.0" mnemonicParsing="false" onAction="#set_systemParams" prefHeight="30.0" prefWidth="157.0" text="Set Parameter">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="inserted" layoutX="364.0" layoutY="292.0" />
+                              <Button fx:id="cmd_update" disable="true" layoutX="352.0" layoutY="346.0" mnemonicParsing="false" onAction="#update" prefHeight="27.0" prefWidth="140.0" text="Update Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Transmitter Side Parameters">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="20.0" layoutY="18.0" prefHeight="227.0" prefWidth="324.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Max Total Transmit Power">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="41.0" text="Allocated Resource Blocks">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="82.0" text="RB to Distribute Power">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="122.0" text="Transmit Antenna Gain">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="160.0" text="Transmit Cable Loss">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="198.0" text="Transmit Body Loss">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="A" alignment="CENTER_RIGHT" layoutX="149.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Typical LTe values ranges from 43dBm - 48dBm" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="B" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="37.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Operator dependent" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="C" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="78.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="operator dependent" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="G" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="118.0" prefHeight="26.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Manufacturer dependent" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="H" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="156.0" prefHeight="28.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Typicatl LTE values between 1 - 6dB" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="I" alignment="CENTER_RIGHT" layoutX="149.0" layoutY="194.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Device dependent" />
+                                       </tooltip></TextField>
+                                    <Label layoutX="298.0" layoutY="4.0" text="dBm">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="298.0" layoutY="122.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="298.0" layoutY="160.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="298.0" layoutY="198.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <TitledPane layoutX="20.0" layoutY="284.0" prefHeight="182.0" prefWidth="352.0" text="Calculated Budget Parameters">
+                                 <content>
+                                    <Pane>
+                                       <children>
+                                          <Label layoutY="4.0" text="Subcarrier to Distribute Power">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutY="41.0" text="Subcarrier Power">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutY="79.0" text="EIRP per Subcarrier">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="D" alignment="CENTER_RIGHT" editable="false" layoutX="173.0" prefHeight="27.0" prefWidth="145.0" />
+                                          <TextField fx:id="E" alignment="CENTER_RIGHT" editable="false" layoutX="173.0" layoutY="37.0" prefHeight="28.0" prefWidth="145.0" />
+                                          <TextField fx:id="J" alignment="CENTER_RIGHT" editable="false" layoutX="173.0" layoutY="75.0" prefHeight="28.0" prefWidth="145.0" />
+                                          <Button fx:id="cmd_calculate_dl" layoutX="173.0" layoutY="114.0" mnemonicParsing="false" onAction="#calculate_dl" prefHeight="29.0" prefWidth="148.0" text="Calculate">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Button>
+                                          <Label layoutX="321.0" layoutY="41.0" text="dBm">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="321.0" layoutY="79.0" text="dBm">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <Button fx:id="cmd_save1" layoutX="384.0" layoutY="425.0" mnemonicParsing="false" onAction="#save1" prefHeight="30.0" prefWidth="121.0" text="Save Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cmd_update1" disable="true" layoutX="543.0" layoutY="426.0" mnemonicParsing="false" onAction="#update1" prefHeight="28.0" prefWidth="120.0" text="Update Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="label2" layoutX="393.0" layoutY="366.0" />
+                              <Pane layoutX="373.0" layoutY="79.0" prefHeight="184.0" prefWidth="176.0">
+                                 <children>
+                                    <Gauge fx:id="gauge1" alert="true" animated="true" areaTextVisible="true" areasVisible="true" averageVisible="true" barEffectEnabled="true" checkAreasForValue="true" checkSectionsForValue="true" checkThreshold="true" customFontEnabled="true" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="1.0" layoutY="22.0" lcdCrystalEnabled="true" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" markersVisible="true" prefHeight="162.0" prefWidth="182.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" skinType="SIMPLE_DIGITAL" smoothing="true" threshold="25.0" thresholdVisible="true" title="SUBCARRIER POWER" unit="dBm">
+                                       <customFont>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </customFont></Gauge>
+                                 </children></Pane>
+                              <Pane layoutX="564.0" layoutY="78.0" prefHeight="179.0" prefWidth="185.0">
+                                 <children>
+                                    <Gauge fx:id="gauge2" alert="true" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" barEffectEnabled="true" checkAreasForValue="true" checkSectionsForValue="true" checkThreshold="true" customFontEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="7.0" layoutY="21.0" lcdCrystalEnabled="true" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" prefHeight="159.0" prefWidth="183.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="SIMPLE_DIGITAL" smoothing="true" threshold="35.0" thresholdVisible="true" tickLabelSectionsVisible="true" tickMarkRingVisible="true" tickMarkSectionsVisible="true" title="EIRP" unit="dBm">
+                                       <customFont>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </customFont></Gauge>
+                                 </children></Pane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Receiver side Parameters">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="25.0" layoutY="20.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Signal to Interference NR">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="44.0" text="Receiver Noise Figure">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="90.0" text="Receiver Antenna Gain">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="135.0" text="Receiver Cable Loss">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="177.0" text="Receiver Body Loss">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="221.0" text="Target Load (%) (TL)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="265.0" text="Interference Margin">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="K" alignment="CENTER_RIGHT" layoutX="145.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Typical LTE values between -9 to -7dB" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="L" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="40.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Operator Dependent" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="N" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="86.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Manufacturer Dependent" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="O" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="131.0" prefHeight="26.0" prefWidth="145.0" />
+                                    <TextField fx:id="P" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="173.0" prefHeight="28.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Device dependent" />
+                                       </tooltip></TextField>
+                                    <ComboBox fx:id="IN8" layoutX="145.0" layoutY="217.0" prefHeight="24.0" prefWidth="150.0">
+                                       <tooltip>
+                                          <Tooltip text="Target load ranges from 60 - 100 %" />
+                                       </tooltip></ComboBox>
+                                    <TextField fx:id="Q" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="263.0" prefHeight="29.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Typical LTE values from 3 - 8dB" />
+                                       </tooltip></TextField>
+                                    <Label layoutX="295.0" layoutY="4.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="295.0" layoutY="44.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="295.0" layoutY="265.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="295.0" layoutY="90.0" text="dBi">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="294.0" layoutY="135.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="294.0" layoutY="177.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <TitledPane animated="false" layoutX="25.0" layoutY="321.0" prefHeight="152.0" prefWidth="352.0" text="Calculated Budget Parameters">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane>
+                                             <children>
+                                                <Label layoutY="4.0" text="Receiver Sensitivity">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutY="48.0" text="Min Signal Reception Strength">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="M" alignment="CENTER_RIGHT" editable="false" layoutX="168.0" prefHeight="29.0" prefWidth="145.0" />
+                                                <TextField fx:id="R" alignment="CENTER_RIGHT" editable="false" layoutX="168.0" layoutY="40.0" prefHeight="28.0" prefWidth="145.0" />
+                                                <Label layoutX="317.0" layoutY="4.0" text="dBm">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="317.0" layoutY="48.0" text="dBm">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Button fx:id="cmd_calculate_ul" layoutX="172.0" layoutY="81.0" mnemonicParsing="false" onAction="#calculate_ul" prefHeight="31.0" prefWidth="146.0" text="Calculate">
+                                             <font>
+                                                <Font name="Arial Narrow Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <Button fx:id="cmd_save2" layoutX="384.0" layoutY="428.0" mnemonicParsing="false" onAction="#save2" prefHeight="31.0" prefWidth="119.0" text="Save Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cmd_update2" disable="true" layoutX="530.0" layoutY="430.0" mnemonicParsing="false" onAction="#update2" prefHeight="28.0" prefWidth="119.0" text="Update Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="label22" layoutX="384.0" layoutY="389.0" />
+                              <Pane layoutX="353.0" layoutY="70.0" prefHeight="168.0" prefWidth="150.0">
+                                 <children>
+                                    <Gauge fx:id="gauge3" alert="true" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" checkThreshold="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="-5.0" layoutY="14.0" lcdCrystalEnabled="true" lcdVisible="true" ledBlinking="true" ledOn="true" ledType="FLAT" ledVisible="true" maxValue="10.0" minValue="-150.0" prefHeight="140.0" prefWidth="161.0" skinType="DIGITAL" smoothing="true" stylesheets="@../style/caspian.css" threshold="-140.0" thresholdVisible="true" tickLabelSectionsVisible="true" tickMarkRingVisible="true" tickMarkSectionsVisible="true" title="RECEIVER SENSITIVITY" unit="dBm" />
+                                 </children></Pane>
+                              <Pane layoutX="530.0" layoutY="92.0" prefHeight="149.0" prefWidth="146.0">
+                                 <children>
+                                    <Gauge fx:id="gauge4" alert="true" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" checkThreshold="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="7.0" lcdCrystalEnabled="true" ledType="FLAT" maxValue="10.0" minValue="-150.0" prefHeight="137.0" prefWidth="134.0" skinType="DIGITAL" smoothing="true" stylesheets="@../style/caspian.css" threshold="-140.0" thresholdVisible="true" tickLabelSectionsVisible="true" tickMarkRingVisible="true" tickMarkSectionsVisible="true" title="Min. Signal Receiver Strength" unit="dBm" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Final Budget Output">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="28.0" layoutY="7.0" prefWidth="315.0">
+                                 <children>
+                                    <Label layoutY="4.0" text="Indoor Penetration Loss">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="45.0" text="Shadow Fading Margin">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="87.0" text="Propagation Model (PM)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="128.0" text="UE Antenna Height">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="176.0" text="eNodeB Antenna Height">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="216.0" text="Carrier Frequency (Fc)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="259.0" text="Site Type (ST)">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutY="297.0" text="Total Surface Area">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="S" alignment="CENTER_RIGHT" layoutX="140.0" prefHeight="28.0" prefWidth="145.0" />
+                                    <TextField fx:id="T" alignment="CENTER_RIGHT" layoutX="140.0" layoutY="41.0" prefHeight="29.0" prefWidth="145.0" />
+                                    <TextField fx:id="IN12" alignment="CENTER_RIGHT" editable="false" layoutX="140.0" layoutY="212.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="LTE Frequency bands ranges from 1800 - 2600MHz" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="IN10" alignment="CENTER_RIGHT" layoutX="140.0" layoutY="124.0" prefHeight="27.0" prefWidth="145.0">
+                                       <tooltip>
+                                          <Tooltip text="Empty Tooltip" />
+                                       </tooltip></TextField>
+                                    <TextField fx:id="IN11" alignment="CENTER_RIGHT" layoutX="140.0" layoutY="172.0" prefHeight="27.0" prefWidth="145.0" />
+                                    <ComboBox fx:id="IN9" layoutX="140.0" layoutY="83.0" prefHeight="28.0" prefWidth="150.0">
+                                       <tooltip>
+                                          <Tooltip text="Depends on the frequency band and Terrain Morphology used" />
+                                       </tooltip></ComboBox>
+                                    <ComboBox fx:id="IN13" layoutX="140.0" layoutY="255.0" prefHeight="27.0" prefWidth="150.0">
+                                       <tooltip>
+                                          <Tooltip text="Clutter type" />
+                                       </tooltip></ComboBox>
+                                    <TextField fx:id="IN14" alignment="CENTER_RIGHT" layoutX="140.0" layoutY="290.0" prefHeight="27.0" prefWidth="145.0" />
+                                    <Label layoutX="290.0" layoutY="4.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="290.0" layoutY="45.0" text="dB">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="290.0" layoutY="128.0" text="m">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="290.0" layoutY="216.0" text="MHz">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="290.0" layoutY="297.0" text="km2">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="291.0" layoutY="173.0" text="m">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <TitledPane animated="false" layoutX="28.0" layoutY="334.0" prefHeight="142.0" prefWidth="344.0" text="Final Budget Output">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane prefHeight="115.0" prefWidth="338.0">
+                                             <children>
+                                                <Label layoutY="4.0" text="Maximum Allowable Pathloss">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutY="35.0" text="Cell Radius">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutY="66.0" text="Number of eNodeBs">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="O1" editable="false" layoutX="165.0" prefHeight="25.0" prefWidth="145.0" />
+                                                <TextField fx:id="O2" editable="false" layoutX="165.0" layoutY="31.0" prefHeight="25.0" prefWidth="145.0" />
+                                                <TextField fx:id="O3" alignment="CENTER_RIGHT" editable="false" layoutX="165.0" layoutY="63.0" prefHeight="25.0" prefWidth="145.0" />
+                                                <Button fx:id="cmd_calculate_result" layoutX="165.0" layoutY="90.0" mnemonicParsing="false" onAction="#calculate_finalBudget" prefHeight="25.0" prefWidth="144.0" text="Calculate">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Label layoutX="312.0" layoutY="35.0" text="km">
+                                                   <font>
+                                                      <Font name="Arial Narrow Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <Button fx:id="cmd_update3" disable="true" layoutX="386.0" layoutY="444.0" mnemonicParsing="false" onAction="#update3" prefHeight="30.0" prefWidth="117.0" text="Update Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cmd_save3" layoutX="386.0" layoutY="390.0" mnemonicParsing="false" onAction="#save3" prefHeight="30.0" prefWidth="116.0" text="Save Data">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="517.0" layoutY="444.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" text="Place Sites">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="label33" layoutX="351.0" layoutY="346.0" />
+                              <Gauge fx:id="gauge5" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="336.0" layoutY="14.0" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" prefHeight="134.0" prefWidth="169.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="SIMPLE_DIGITAL" smoothing="true" thresholdVisible="true" title="SUBCARRIER POWER" unit="dBm" />
+                              <Gauge fx:id="gauge6" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="498.0" layoutY="14.0" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" prefHeight="128.0" prefWidth="157.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="SIMPLE_DIGITAL" smoothing="true" thresholdVisible="true" title="EIRP" unit="dBm" />
+                              <Gauge fx:id="gauge7" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="655.0" layoutY="19.0" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" maxValue="10.0" minValue="-160.0" prefHeight="115.0" prefWidth="136.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="DIGITAL" smoothing="true" threshold="-140.0" thresholdVisible="true" title="RECEIVER SENSITIVITY" unit="dBm" />
+                              <Gauge fx:id="gauge8" alert="true" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="350.0" layoutY="183.0" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" maxValue="10.0" minValue="-160.0" prefHeight="119.0" prefWidth="141.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="DIGITAL" smoothing="true" threshold="-140.0" thresholdVisible="true" title="Min. Signal Receiver Strength" unit="dBm" />
+                              <Gauge fx:id="gauge9" animated="true" areaIconsVisible="true" areaTextVisible="true" areasVisible="true" averageVisible="true" averagingEnabled="true" backgroundPaint="#6b646400" gradientBarEnabled="true" highlightAreas="true" highlightSections="true" interactive="true" layoutX="505.0" layoutY="183.0" lcdVisible="true" ledBlinking="true" ledOn="true" ledVisible="true" maxValue="200.0" prefHeight="115.0" prefWidth="140.0" sectionIconsVisible="true" sectionTextVisible="true" sectionsAlwaysVisible="true" sectionsVisible="true" skinType="AMP" smoothing="true" threshold="140.0" thresholdVisible="true" title="MAPL" unit="dBm" />
+                              <Gauge fx:id="gauge11" animated="true" areaIconsVisible="true" averageVisible="true" averagingEnabled="true" layoutX="655.0" layoutY="182.0" maxValue="300.0" prefHeight="121.0" prefWidth="130.0" skinType="TILE_KPI" title="eNodeB Number" unit="eNodeB" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <left>
+            <Pane prefHeight="536.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="6.0" layoutY="115.0" prefHeight="307.0" prefWidth="167.0">
+                     <children>
+                        <ImageView fitHeight="283.0" fitWidth="162.0" layoutX="-2.0" layoutY="10.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/Communication-Tower-Transparent-Images-PNG.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutY="277.0" style="-fx-text-fill: GREEN;" text="4G LTE COVERAGE PLANNER" textFill="#10971e" underline="true">
+                           <font>
+                              <Font name="Forte" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children></Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

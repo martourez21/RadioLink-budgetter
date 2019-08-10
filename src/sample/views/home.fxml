@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="612.0" prefWidth="1049.0" stylesheets="@../styles/caspian.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <children>
+      <BorderPane layoutX="637.0" layoutY="150.0" prefHeight="646.0" prefWidth="1168.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="53.0" prefWidth="1168.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                     <menus>
+                        <Menu mnemonicParsing="false">
+                           <graphic>
+                              <JFXButton fx:id="cmd_create_project" onAction="#createProjects" style="-fx-background-color: #444;" stylesheets="@../styles/modena.css" text="Create Project">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                           </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Open Project" />
+                              <MenuItem mnemonicParsing="false" text="Open recent projects               &gt;" />
+                              <MenuItem mnemonicParsing="false" text="Save                               Ctrl+S" />
+                              <MenuItem mnemonicParsing="false" text="Save As" />
+                              <MenuItem mnemonicParsing="false" text="Import" />
+                              <MenuItem mnemonicParsing="false" text="Export Project                         &gt;" />
+                              <MenuItem mnemonicParsing="false" text="Exit" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Undo                              Ctrl+Z" />
+                              <MenuItem mnemonicParsing="false" text="Redo                               Ctrl+Y" />
+                              <MenuItem mnemonicParsing="false" text="Cut                                 Ctrl+X" />
+                              <MenuItem mnemonicParsing="false" text="Copy                               Ctrl+C" />
+                              <MenuItem mnemonicParsing="false" text="Paste                              Ctrl+V" />
+                              <MenuItem mnemonicParsing="false" text="Delete                           Delete" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <ToolBar prefHeight="26.0" prefWidth="1168.0">
+                     <items>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="13.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="7.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="7.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="13.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="10.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="3.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="6.0" text="Button">
+                           <tooltip>
+                              <Tooltip text="Empty Tooltip" />
+                           </tooltip>
+                        </Button>
+                     </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <left>
+            <Pane BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="331.0" fitWidth="254.0" layoutX="3.0" layoutY="72.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/Communication-Tower-Transparent-Images-PNG.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="100.0" fitWidth="237.0" layoutX="11.0" layoutY="344.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/ASTRAX%20TECH.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="7.0" layoutY="287.0" style="-fx-text-fill: GREEN;" text="RADIO PLANNEX " textFill="#10971e">
+                     <font>
+                        <Font name="Forte" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab fx:id="coverage_tab" text="COVERAGE PLANNING">
+                  <content>
+                    <AnchorPane fx:id="coverage_plan" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="cmd_coverage_module" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#loadCoverage" prefHeight="28.0" prefWidth="231.0" text="LOAD COVERAGE PLANNER MODULE" textFill="#035b13">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Pane fx:id="pane1" layoutX="151.0" layoutY="92.0" prefHeight="296.0" prefWidth="457.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="display_sites_tab" text="DISPLAY COVERAGE SITES">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <WebView fx:id="GoogleMap" layoutX="23.0" layoutY="23.0" prefHeight="518.0" prefWidth="792.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <Button fx:id="cmd_loadmap" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadMap" prefHeight="26.0" prefWidth="200.0" text="LOCATE SITE ON GOOGLE MAP" textFill="#016b27">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="capacity_tab" text="CAPACITY PLANNING">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="report_tab" text="REPORT PROJECT DATA">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

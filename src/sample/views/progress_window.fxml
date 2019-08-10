@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ProgressBar fx:id="progress_bar_indicator" layoutX="12.0" layoutY="211.0" prefHeight="18.0" prefWidth="422.0" progress="0.0" />
+      <ProgressIndicator fx:id="progress_indicator" layoutX="149.0" layoutY="79.0" prefHeight="89.0" prefWidth="159.0" progress="0.0" />
+   </children>
+</Pane>
