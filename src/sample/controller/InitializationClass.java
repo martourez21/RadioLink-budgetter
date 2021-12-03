@@ -1,6 +1,7 @@
 package sample.controller;
 
 import eu.hansolo.medusa.Gauge;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -27,7 +28,7 @@ public class InitializationClass {
     private Gauge gauge4;
 
     @FXML
-    private ComboBox<String> IN1;
+    private SimpleObjectProperty<ComboBox<String>> IN1 = new SimpleObjectProperty<ComboBox<String>>(this, "IN1");
 
     @FXML
     private ComboBox<String> IN5;

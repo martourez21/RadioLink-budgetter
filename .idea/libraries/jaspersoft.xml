@@ -1,10 +1,26 @@
 <component name="libraryTable">
   <library name="jaspersoft">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/src/sample/jaspersoft" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/groovy-all-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/jasperreports-5.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/jasper-compiler-jdt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/com-jaspersoft-ireport-components.Id_260481.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/com-jaspersoft-jrx.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/com-jaspersoft-ireport-jasperserver.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/com-jaspersoft-ireport-components.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/commons-javaflow-20060411.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/dom4j-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/iText-2.1.7.js2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/iTextAsian.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/commons-beanutils-1.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/com-jaspersoft-ireport.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/sample/jaspersoft/barcode4j-2.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/src/sample/jaspersoft" recursive="false" />
   </library>
 </component>
